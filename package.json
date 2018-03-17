@@ -3,6 +3,7 @@
     "gulp": "^3.9.1",
     "gulp-elm": "^0.7.2",
     "gulp-git": "^2.5.2",
+    "gulp-phonegap-build": "^0.1.5",
     "gulp-template": "^5.0.0"
   }
 }
