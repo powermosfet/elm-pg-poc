@@ -1,5 +1,6 @@
 // @format
 
+require('dotenv').config();
 var gulp = require('gulp');
 var elm = require('gulp-elm');
 var git = require('gulp-git');
@@ -26,6 +27,7 @@ gulp.task('template', () =>
       if (err) {
         throw err;
       }
+
       let regex_result = /v(\d+(\.\d+)*)/.exec(description);
       let templateData = {
         description: description.trim(),
@@ -33,6 +35,7 @@ gulp.task('template', () =>
         numVersion: parseInt(commitCount, 10),
         timestamp: new Date().toISOString(),
       };
+
       return gulp
         .src('templates/**/*')
         .pipe(template(templateData))
@@ -46,9 +49,9 @@ gulp.task('prepare', ['template', 'static', 'elm-bundle']);
 gulp.task('phonegap-build', ['prepare'], () =>
   gulp.src('dist/**/*', {dot: true}).pipe(
     phonegapBuild({
-      appId: '9876',
+      appId: process.env.APP_ID,
       user: {
-        token: 'ABCD123409876XYZ',
+        token: process.env.PGB_TOKEN,
       },
     }),
   ),
