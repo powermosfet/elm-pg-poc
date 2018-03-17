@@ -41,7 +41,9 @@ gulp.task('template', () =>
     })
 );
 
-gulp.task('phonegap-build', () =>
+gulp.task('prepare', ['template', 'static', 'elm-bundle']);
+
+gulp.task('phonegap-build', ['prepare'], () =>
     gulp.src('dist/**/*', {dot: true})
         .pipe(phonegapBuild({
             "appId": "9876",
@@ -51,4 +53,4 @@ gulp.task('phonegap-build', () =>
         }));
 );
 
-gulp.task('default', ['template', 'static', 'elm-bundle']);
+gulp.task('default', ['prepare']);
