@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var elm = require('gulp-elm');
 var git = require('gulp-git');
 var template = require('gulp-template');
+var phonegapBuild = require('gulp-phonegap-build');
 
 gulp.task('elm-init', elm.init);
 
