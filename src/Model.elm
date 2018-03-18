@@ -4,9 +4,12 @@ import Message exposing (Msg)
 
 
 type alias Model =
-    Int
+    { menuOpen : Bool }
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( 0, Cmd.none )
+    ( { menuOpen = False
+      }
+    , Cmd.none
+    )

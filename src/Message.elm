@@ -2,4 +2,5 @@ module Message exposing (..)
 
 
 type Msg
-    = Nope
+    = ToggleMenu
+    | CloseMenu
