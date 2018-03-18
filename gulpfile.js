@@ -53,6 +53,7 @@ gulp.task('phonegap-build', ['prepare'], () =>
       user: {
         token: process.env.PGB_TOKEN,
       },
+      platforms: ['android']
     }),
   ),
 );
