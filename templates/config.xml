@@ -1,11 +1,19 @@
 <?xml version="1.1" encoding="UTF-8" ?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="no.dfo.sapapp.fot" versionCode="<%= numVersion %>" version="<%= version %>" >
+<widget
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:gap="http://phonegap.com/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="no.asmundberge.elmpgpoc"
+    versionCode="<%= numVersion %>"
+    version="<%= version %>"
+    >
     <name>Elm Phonegap app</name>
     <description>Elm phonegap app | commit: <%= description %> | timestamp: <%= timestamp %></description>
 
-<platform name="android" >
-</platform>
+    <meta name="viewport" content="width=device-width" />
 
-<preference name="phonegap-version" value="cli-7.0.1"/>
+    <platform name="android" >
+    </platform>
 
+    <preference name="phonegap-version" value="cli-7.0.1"/>
 </widget>
