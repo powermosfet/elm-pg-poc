@@ -12,3 +12,10 @@ update msg model =
 
         CloseMenu ->
             ( { model | menuOpen = False }, Cmd.none )
+
+        LoadIcons result ->
+            let
+                mIcons =
+                    Result.toMaybe result
+            in
+                ( { model | iconDefinitions = mIcons }, Cmd.none )
